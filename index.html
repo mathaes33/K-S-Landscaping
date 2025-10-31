@@ -1,483 +1,283 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyle and Sam Landscaping | Waterproofing, Landscaping, Demolition</title>
-    <meta name="description" content="A responsive, single-page website for a landscaping company built with vanilla JavaScript and Tailwind CSS. It features sections for services, a project gallery, client testimonials, and a contact form." />
+    <title>K&S Landscaping | Landscape, Hardscape & Construction Labor</title>
+    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/a/AVvXsEjiguhZj-Kg0FhUY3AjmQ8HCCk5cwNzyXqTQr_huPx0VKmjcT-bdcyU7dkmbC1uCNDqk9dq-7gesd4h4rQt_YSTruIrbYoTteNQ1pPt-AhuEsYCcVrQhljHCOHw_35oxtuwWwY4WCFJ3BAUK9V11kSfYRmgQs9G_KzBmefxA7qUjKd1nY-92WMoteihTAw=w640-h640-rw" />
+
+    <!-- SEO & Social Sharing Tags -->
+    <meta name="description" content="Top-rated landscaping, hardscape construction, and basement waterproofing in Mississauga, ON. K&S Landscaping offers reliable maintenance, custom garden design, and skilled labor. Get your free quote today.">
+    <meta name="keywords" content="landscaping Mississauga, hardscaping, patios, retaining walls, basement waterproofing, foundation sealing, construction labor, demolition, site clean-up, lawn maintenance, garden design">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kslandscaping.example.com/">
+    <meta property="og:title" content="K&S Landscaping | Landscape, Hardscape & Construction Labor">
+    <meta property="og:description" content="Top-rated landscaping, hardscape construction, and basement waterproofing in Mississauga, ON. K&S Landscaping offers reliable maintenance, custom garden design, and skilled labor. Get your free quote today.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEjiguhZj-Kg0FhUY3AjmQ8HCCk5cwNzyXqTQr_huPx0VKmjcT-bdcyU7dkmbC1uCNDqk9dq-7gesd4h4rQt_YSTruIrbYoTteNQ1pPt-AhuEsYCcVrQhljHCOHw_35oxtuwWwY4WCFJ3BAUK9V11kSfYRmgQs9G_KzBmefxA7qUjKd1nY-92WMoteihTAw=w640-h640-rw">
+    <meta property="og:site_name" content="K&S Landscaping">
+    <meta property="og:locale" content="en_US">
+
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kslandscaping.example.com/">
+    <meta property="twitter:title" content="K&S Landscaping | Landscape, Hardscape & Construction Labor">
+    <meta property="twitter:description" content="Top-rated landscaping, hardscape construction, and basement waterproofing in Mississauga, ON. K&S Landscaping offers reliable maintenance, custom garden design, and skilled labor. Get your free quote today.">
+    <meta property="twitter:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEjiguhZj-Kg0FhUY3AjmQ8HCCk5cwNzyXqTQr_huPx0VKmjcT-bdcyU7dkmbC1uCNDqk9dq-7gesd4h4rQt_YSTruIrbYoTteNQ1pPt-AhuEsYCcVrQhljHCOHw_35oxtuwWwY4WCFJ3BAUK9V11kSfYRmgQs9G_KzBmefxA7qUjKd1nY-92WMoteihTAw=w640-h640-rw">
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "K&S Landscaping",
+      "description": "Expert landscaping, hardscaping, and construction services in Mississauga, ON. Specializing in landscape design, patios, retaining walls, basement waterproofing, foundation sealing, and demolition.",
+      "url": "https://kslandscaping.example.com/",
+      "telephone": "+1-437-215-1031",
+      "email": "Kyleandsam00@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "75 Watline Avenue",
+        "addressLocality": "Mississauga",
+        "addressRegion": "ON",
+        "postalCode": "L4Z 3E5",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.5890,
+        "longitude": -79.6441
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "image": "https://blogger.googleusercontent.com/img/a/AVvXsEjiguhZj-Kg0FhUY3AjmQ8HCCk5cwNzyXqTQr_huPx0VKmjcT-bdcyU7dkmbC1uCNDqk9dq-7gesd4h4rQt_YSTruIrbYoTteNQ1pPt-AhuEsYCcVrQhljHCOHw_35oxtuwWwY4WCFJ3BAUK9V11kSfYRmgQs9G_KzBmefxA7qUjKd1nY-92WMoteihTAw=w640-h640-rw",
+      "priceRange": "$$",
+      "itemOffered": [
+        { "@type": "Service", "name": "Landscape Maintenance & Seasonal Clean-Up" },
+        { "@type": "Service", "name": "Garden Design & Planting" },
+        { "@type": "Service", "name": "Landscape & Hardscape Construction" },
+        { "@type": "Service", "name": "Skilled Construction & Demolition Labour" },
+        { "@type": "Service", "name": "General Labour & Site Clean-up" },
+        { "@type": "Service", "name": "Basement Waterproofing & Foundation Sealing" }
+      ]
+    }
+    </script>
+
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      .particle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .particle {
+        position: absolute;
+        background-color: rgba(224, 184, 104, 0.4); /* secondary-light with transparency */
+        border-radius: 50%;
+        bottom: 0;
+        animation: float 25s infinite linear;
+      }
+      .particle:nth-child(1) { width: 5px; height: 5px; left: 10%; animation-duration: 20s; animation-delay: 0s; }
+      .particle:nth-child(2) { width: 8px; height: 8px; left: 20%; animation-duration: 15s; animation-delay: 2s; }
+      .particle:nth-child(3) { width: 4px; height: 4px; left: 30%; animation-duration: 30s; animation-delay: 5s; }
+      .particle:nth-child(4) { width: 6px; height: 6px; left: 45%; animation-duration: 22s; animation-delay: 3s; }
+      .particle:nth-child(5) { width: 7px; height: 7px; left: 60%; animation-duration: 18s; animation-delay: 8s; }
+      .particle:nth-child(6) { width: 4px; height: 4px; left: 75%; animation-duration: 28s; animation-delay: 1s; }
+      .particle:nth-child(7) { width: 9px; height: 9px; left: 85%; animation-duration: 14s; animation-delay: 4s; }
+      .particle:nth-child(8) { width: 5px; height: 5px; left: 5%; animation-duration: 23s; animation-delay: 6s; }
+      .particle:nth-child(9) { width: 6px; height: 6px; left: 95%; animation-duration: 19s; animation-delay: 9s; }
+      .particle:nth-child(10) { width: 7px; height: 7px; left: 50%; animation-duration: 26s; animation-delay: 7s; }
 
+      @keyframes float {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-110vh) translateX(15vw);
+          opacity: 0;
+        }
+      }
+
+      /* Shimmer/Skeleton Loader styles */
+      .shimmer-placeholder {
+        background-color: #e2e8f0; /* tailwind gray-200 */
+        position: relative;
+        overflow: hidden;
+      }
+      .shimmer-placeholder::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 20%, rgba(255,255,255,0.5) 60%, rgba(255,255,255,0));
+        animation: shimmer 2s infinite;
+      }
+      @keyframes shimmer {
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* Animation for service card click */
+      @keyframes card-click-animation {
+        50% {
+          transform: translateY(-0.25rem) scale(1.03);
+        }
+        100% {
+          transform: translateY(-0.25rem) scale(1.03);
+        }
+      }
+
+      .card-is-clicking {
+        animation: card-click-animation 0.4s ease-out;
+      }
+
+      /* Animated underline for "Learn More" links on service cards */
+      .group .animated-link {
+        position: relative;
+        padding-bottom: 2px;
+      }
+      .group .animated-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #c69a3b; /* secondary color */
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+      }
+      .group:hover .animated-link::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      
+      /* Accessibility utility class */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      /* Staggered fade-in animation */
+      @keyframes staggeredFadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      .animate-staggered-fade-in-up {
+        opacity: 0; /* Start hidden */
+        animation: staggeredFadeInUp 0.6s ease-out forwards;
+      }
+
+      /* Preferred Service Badge */
+      .preferred-badge {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background-color: #c69a3b; /* secondary */
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        z-index: 10;
+      }
+    </style>
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            colors: {
-              primary: '#2a451f', // WCAG AA compliant with light text
-              secondary: '#6a8a5b',
-              accent: '#dcb990', // WCAG AA compliant with dark text
-              light: '#f8f9fa',
-              dark: '#212529',
-              'off-white': '#fdfdfd',
-            },
             fontFamily: {
-              heading: ['Montserrat', 'sans-serif'],
-              body: ['Roboto', 'sans-serif'],
+              sans: ['Poppins', 'sans-serif'],
             },
-          },
-        },
+            colors: {
+              primary: '#22543d',
+              'primary-dark': '#1a4331',
+              secondary: '#c69a3b',
+              'secondary-light': '#e0b868',
+              accent: '#f0fff4',
+              'light-gray': '#f7fafc',
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 1s ease-out forwards',
+              shimmer: 'shimmer 2s infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+               shimmer: {
+                '100%': { transform: 'translateX(100%)' },
+              },
+            },
+          }
+        }
       }
     </script>
-
-    <style>
-      body {
-        font-family: 'Roboto', sans-serif;
-        background-color: #f8f9fa; /* --color-light */
-        color: #212529; /* --color-dark */
-        line-height: 1.6;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-      }
-
-      body.loaded {
-        opacity: 1;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Montserrat', sans-serif;
-        color: #2a451f; /* --color-primary */
-      }
-
-      .backdrop-blur-sm {
-        backdrop-filter: blur(4px);
-      }
-      
-      .lightbox {
-        animation: fadeIn 0.3s ease;
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-    </style>
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4"
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-light font-body">
-    
-    <script>
-      // === Assets ===
-      const heroImage = 'https://images.unsplash.com/photo-1734079692160-fcbe4be6ab96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-      const aboutImage = 'https://images.unsplash.com/photo-1458245201577-fc8a130b8829?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-      const galleryImage7 = 'https://images.unsplash.com/photo-1689728222087-6984f72460c4?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-
-      // === Icons (as functions returning HTML strings) ===
-      const MenuIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`;
-      const CloseIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
-      const WaterproofingIcon = (className) => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 3.517-1.009 6.79-2.731 9.172.635.16 1.305.278 2 .328 1.437.1 2.923-.333 4.229-1.229a10.024 10.024 0 004.229-8.07C19.731 6.79 18.991 3.517 18 2m-6 9a2 2 0 100-4 2 2 0 000 4zm0 0c-1.305 0-2.5.4-3.5 1.1c-.2.1-.4.3-.5.5c-.2.4-.3.9-.3 1.4c0 1.2.6 2.3 1.5 3c.9.7 2.1 1.1 3.3 1.1c1.2 0 2.4-.4 3.3-1.1c.9-.7 1.5-1.8 1.5-3c0-.5-.1-1-.3-1.4c-.1-.2-.3-.4-.5-.5c-1-.7-2.2-1.1-3.5-1.1z" /></svg>`;
-      const LandscapingIcon = (className) => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.881 4.102A11.936 11.936 0 0012 3c1.398 0 2.743.23 4.028.655M16.14 20.253a12.016 12.016 0 00-8.28 0" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z" /></svg>`;
-      const DemolitionIcon = (className) => `<svg xmlns="http://www.w3.org/2000/svg" class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.532l8 6.536V21H4V11.068l8-6.536zM9 21v-6a3 3 0 013-3h0a3 3 0 013 3v6m-9-15l6 5" /></svg>`;
-      const QuoteIcon = (className) => `<svg class="${className}" fill="currentColor" viewBox="0 0 16 16"><path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/></svg>`;
-      const PhoneIcon = (className) => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>`;
-      const EmailIcon = (className) => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>`;
-      const LocationIcon = (className) => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>`;
-      const InstagramIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.74 0 8.333.01 7.053.062 2.695.272.273 2.69.063 7.052.01 8.333 0 8.74 0 12s.01 3.667.063 4.948c.21 4.358 2.631 6.78 6.99 6.99C8.333 23.99 8.74 24 12 24s3.667-.01 4.948-.062c4.358-.21 6.78-2.631 6.99-6.99.052-1.281.062-1.688.062-4.948s-.01-3.667-.062-4.948C21.73 2.69 19.309.272 14.948.062 13.667.01 13.26 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"></path></svg>`;
-      const TwitterIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.424.727-.666 1.581-.666 2.477 0 1.921.98 3.626 2.477 4.618-.897.028-1.74-.274-2.477-.686v.054c0 2.684 1.912 4.921 4.437 5.428-.464.127-.95.195-1.449.195-.357 0-.702-.034-1.037-.099.706 2.199 2.751 3.799 5.176 3.844-1.899 1.487-4.288 2.374-6.886 2.374-.447 0-.89-.026-1.325-.077 2.453 1.573 5.371 2.492 8.541 2.492 10.239 0 15.834-8.473 15.539-15.834.453-.328.847-.74 1.164-1.205z"></path></svg>`;
-      const SearchIcon = (className = "w-8 h-8") => `<svg class="${className}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>`;
-      const ChevronLeftIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>`;
-      const ChevronRightIcon = (className = "w-6 h-6") => `<svg class="${className}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
-
-      // === Data ===
-      const servicesData = [
-        { icon: WaterproofingIcon("h-14 w-14"), title: 'Waterproofing', description: 'Protect your home from water damage with our expert basement and foundation waterproofing solutions.' },
-        { icon: LandscapingIcon("h-14 w-14"), title: 'Landscaping', description: 'From design to installation, we create beautiful and sustainable landscapes that enhance your property.' },
-        { icon: DemolitionIcon("h-14 w-14"), title: 'Demolition', description: 'Safe, efficient, and clean demolition services for residential and commercial projects of all sizes.' },
-      ];
-      const galleryImages = [
-          { src: 'https://images.unsplash.com/photo-1625337905408-7b6fe970e187?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Spacious landscaped backyard with a lush green lawn and patio' },
-          { src: 'https://images.unsplash.com/photo-1634586621169-93e12e0bd604?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Clean paved walkway through a manicured garden' },
-          { src: 'https://images.unsplash.com/photo-1686987537277-516791dabf61?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Professional demolition work with an excavator on site' },
-          { src: galleryImage7, alt: 'Artistic stone pathway and garden design' },
-          { src: 'https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?q=80&w=1171&auto=format&fit=crop', alt: 'Beautifully landscaped garden with vibrant flowers' },
-          { src: 'https://plus.unsplash.com/premium_photo-1661293848852-48a1c7a9d9ff?q=80&w=1400&auto=format&fit=crop', alt: 'Modern outdoor patio area with comfortable seating' },
-      ];
-      const testimonialsData = [
-        { quote: "Kyle and Sam transformed our backyard into a paradise! Their attention to detail and professionalism were second to none. We couldn't be happier with the results.", author: 'Jessica M.', location: 'Oakville, ON' },
-        { quote: "The waterproofing job they did in our basement was flawless. It's been completely dry ever since, even through heavy rains. Highly recommend their services!", author: 'David Chen', location: 'Mississauga, ON' },
-        { quote: "Needed a tricky demolition job for a renovation, and their team handled it with incredible efficiency and safety. They left the site cleaner than they found it.", author: 'Sarah Jenkins', location: 'Toronto, ON' },
-      ];
-
-      // === "Component" Functions ===
-      const Header = () => {
-        const navLinks = [
-          { href: '#about', title: 'About' },
-          { href: '#services', title: 'Services' },
-          { href: '#gallery', title: 'Gallery' },
-          { href: '#contact', title: 'Contact' },
-        ];
-
-        return `
-          <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-              <a href="#home" class="text-2xl font-bold text-light hover:text-accent transition-colors font-heading">
-                Kyle & Sam Landscaping
-              </a>
-              <nav class="hidden md:flex items-center space-x-8">
-                ${navLinks.map(link => `<a href="${link.href}" class="text-light font-medium tracking-wider hover:text-accent transition-colors">${link.title}</a>`).join('')}
-              </nav>
-              <button id="mobile-menu-button" class="md:hidden text-light z-20" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-                ${MenuIcon()}
-              </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-primary/95 transition-opacity duration-300 opacity-0 pointer-events-none" aria-hidden="true">
-              <nav class="flex flex-col items-center justify-center h-full space-y-8">
-                ${navLinks.map(link => `<a href="${link.href}" class="mobile-nav-link text-light text-2xl font-medium tracking-wider hover:text-accent transition-colors">${link.title}</a>`).join('')}
-              </nav>
-            </div>
-          </header>
-        `;
-      };
-
-      const Hero = () => `
-        <section id="home" class="relative h-screen flex items-center justify-center text-center text-white">
-          <div class="absolute inset-0 bg-black/40 z-10"></div>
-          <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('${heroImage}')"></div>
-          <div class="relative z-20 px-4">
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg mb-4 font-heading text-white">Transforming Your Outdoors</h1>
-            <p class="text-lg md:text-2xl font-light mb-8 drop-shadow-md max-w-2xl mx-auto">Expert Waterproofing, Landscaping, and Demolition Services</p>
-            <a href="#contact" class="inline-block bg-accent text-dark font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl shadow-lg" aria-label="Get a free quote">Get a Free Quote</a>
-          </div>
-        </section>
-      `;
-
-      const About = () => `
-        <section id="about" class="py-20 md:py-32 bg-off-white">
-          <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-heading">About Kyle & Sam</h2>
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-              <div class="md:w-1/2">
-                <img src="${aboutImage}" alt="Kyle from Kyle and Sam Landscaping" class="rounded-xl shadow-2xl w-full object-cover" loading="lazy"/>
-              </div>
-              <div class="md:w-1/2 md:text-left text-center">
-                <h3 class="text-3xl font-semibold mb-6 font-heading">Our Commitment to Excellence</h3>
-                <p class="mb-4 text-lg text-dark/80 leading-relaxed">Founded by Kyle and Sam, our company was built on a foundation of passion for the outdoors and a commitment to quality craftsmanship. With years of combined experience, we bring expertise, reliability, and a personal touch to every project.</p>
-                <p class="text-lg text-dark/80 leading-relaxed">We believe in creating lasting relationships with our clients by exceeding their expectations and delivering beautiful, functional spaces. From intricate landscape designs to robust waterproofing solutions and precise demolition work, your vision is our mission.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      `;
-
-      const Services = () => `
-        <section id="services" class="bg-light py-20 md:py-32">
-          <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-heading">Our Expert Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-              ${servicesData.map(service => `
-                <div class="bg-off-white p-8 rounded-xl shadow-lg text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center">
-                  <div class="mb-5 text-accent">${service.icon}</div>
-                  <h3 class="text-2xl font-semibold mb-3 font-heading">${service.title}</h3>
-                  <p class="leading-relaxed text-dark/70">${service.description}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </section>
-      `;
-
-      const Gallery = () => `
-        <section id="gallery" class="py-20 md:py-32 bg-off-white">
-          <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-heading">Our Work</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-              ${galleryImages.map((image, index) => `
-                <button data-gallery-index="${index}" class="gallery-item rounded-xl overflow-hidden shadow-lg group relative focus:outline-none focus:ring-4 focus:ring-accent/70 aspect-square" aria-label="View project: ${image.alt}">
-                  <img src="${image.src}" alt="${image.alt}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" />
-                  <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center" aria-hidden="true">
-                    ${SearchIcon('w-12 h-12 text-white')}
-                  </div>
-                </button>
-              `).join('')}
-            </div>
-          </div>
-        </section>
-      `;
-
-      const Testimonials = () => `
-        <section id="testimonials" class="bg-light py-20 md:py-32">
-          <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-heading">What Our Clients Say</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-              ${testimonialsData.map(testimonial => `
-                <div class="bg-off-white p-8 rounded-xl shadow-lg flex flex-col h-full">
-                  ${QuoteIcon('w-10 h-10 mb-5 text-accent/75')}
-                  <p class="italic text-dark/80 mb-6 flex-grow">"${testimonial.quote}"</p>
-                  <div>
-                    <p class="font-bold font-heading text-primary">${testimonial.author}</p>
-                    <p class="text-sm text-dark/70">${testimonial.location}</p>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </section>
-      `;
-
-      const Contact = () => {
-          const formInputStyles = "w-full p-4 bg-light border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-shadow";
-          return `
-          <section id="contact" class="py-20 md:py-32 bg-off-white">
-            <div class="container mx-auto px-6">
-              <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 font-heading">Get In Touch</h2>
-              <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
-                <div class="lg:w-1/3">
-                  <h3 class="text-3xl font-semibold mb-6 font-heading">Contact Information</h3>
-                  <p class="mb-8 text-lg text-dark/80">Ready to start your project? Give us a call, send an email, or fill out the form. We're excited to hear from you.</p>
-                  <div class="space-y-6 text-lg">
-                    <a href="tel:437-240-2266" class="flex items-center group transition-colors">
-                      ${PhoneIcon('w-6 h-6 mr-4 text-primary group-hover:text-accent')} 
-                      <span class="group-hover:text-primary">(437) 240-2266</span>
-                    </a>
-                    <a href="mailto:Mckyle.ebanks30@gmail.com" class="flex items-center group transition-colors break-all">
-                      ${EmailIcon('w-6 h-6 mr-4 text-primary flex-shrink-0 group-hover:text-accent')}
-                      <span class="group-hover:text-primary">Mckyle.ebanks30@gmail.com</span>
-                    </a>
-                    <p class="flex items-center">
-                      ${LocationIcon('w-6 h-6 mr-4 text-primary')} Serving the Greater Toronto Area
-                    </p>
-                  </div>
-                </div>
-                <div class="lg:w-2/3 bg-white p-8 md:p-12 rounded-xl shadow-2xl">
-                  <form id="contact-form" class="space-y-6" novalidate>
-                    <div class="grid md:grid-cols-2 gap-6">
-                      <div><label for="name" class="sr-only">Your Name</label><input type="text" id="name" name="name" placeholder="Your Name" class="${formInputStyles}" required /></div>
-                      <div><label for="email" class="sr-only">Your Email</label><input type="email" id="email" name="email" placeholder="Your Email" class="${formInputStyles}" required /></div>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-6">
-                      <div><label for="phone" class="sr-only">Your Phone</label><input type="tel" id="phone" name="phone" placeholder="Your Phone" class="${formInputStyles}" /></div>
-                      <div>
-                        <label for="service" class="sr-only">Select a Service</label>
-                        <select id="service" name="service" class="${formInputStyles}" required>
-                          <option value="">Select a Service</option>
-                          <option value="Waterproofing">Waterproofing</option>
-                          <option value="Landscaping">Landscaping</option>
-                          <option value="Demolition">Demolition</option>
-                          <option value="Other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div><label for="message" class="sr-only">Your Message</label><textarea id="message" name="message" placeholder="Your Message" rows="5" class="${formInputStyles}" required></textarea></div>
-                    <div class="flex flex-col items-start gap-4">
-                      <button type="submit" id="submit-button" class="w-full md:w-auto bg-primary text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 ease-in-out hover:bg-opacity-90 hover:shadow-lg hover:scale-105 disabled:bg-gray-400 disabled:scale-100 disabled:cursor-not-allowed">Send Message</button>
-                      <div id="form-status" role="alert" aria-live="polite"></div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
-        `;
-      }
-
-      const Footer = () => {
-        const currentYear = new Date().getFullYear();
-        return `
-          <footer class="bg-primary text-light">
-            <div class="container mx-auto px-6 py-12">
-              <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                <div class="md:col-span-1 mb-6 md:mb-0">
-                  <h3 class="text-2xl font-bold text-white font-heading">Kyle & Sam Landscaping</h3>
-                  <p class="text-light/80 mt-2">Quality You Can Trust, Service You Can Rely On.</p>
-                </div>
-                <div class="md:col-span-1 mb-6 md:mb-0">
-                  <h4 class="font-bold mb-4 uppercase tracking-wider text-sm text-accent">Contact Us</h4>
-                  <div class="space-y-3 flex flex-col items-center md:items-start">
-                    <a href="tel:437-240-2266" class="inline-flex items-center hover:text-accent transition-colors">${PhoneIcon('w-5 h-5 mr-2')} (437) 240-2266</a>
-                    <a href="mailto:Mckyle.ebanks30@gmail.com" class="inline-flex items-center hover:text-accent transition-colors break-all">${EmailIcon('w-5 h-5 mr-2 flex-shrink-0')} Mckyle.ebanks30@gmail.com</a>
-                  </div>
-                </div>
-                <div class="md:col-span-1">
-                  <h4 class="font-bold mb-4 uppercase tracking-wider text-sm text-accent">Follow Us</h4>
-                  <div class="flex space-x-5 justify-center md:justify-start">
-                    <a href="#" aria-label="Instagram" class="text-light hover:text-accent transition-transform duration-300 hover:scale-110">${InstagramIcon()}</a>
-                    <a href="#" aria-label="Twitter" class="text-light hover:text-accent transition-transform duration-300 hover:scale-110">${TwitterIcon()}</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-12 border-t border-secondary/30 pt-8 text-center text-sm text-light/70">
-                <p>&copy; ${currentYear} Kyle and Sam Landscaping. All Rights Reserved.</p>
-              </div>
-            </div>
-          </footer>
-        `;
-      };
-
-      // === App Logic & Event Listeners ===
-      function addEventListeners() {
-        // --- Header Logic ---
-        const header = document.getElementById('header');
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        let isMenuOpen = false;
-
-        const handleScroll = () => {
-          if (window.scrollY > 50) {
-            header.classList.add('bg-primary/90', 'shadow-lg', 'backdrop-blur-sm');
-            header.classList.remove('bg-transparent');
-          } else {
-            if (!isMenuOpen) {
-              header.classList.remove('bg-primary/90', 'shadow-lg', 'backdrop-blur-sm');
-              header.classList.add('bg-transparent');
-            }
-          }
-        };
-        window.addEventListener('scroll', handleScroll, { passive: true });
-
-        const toggleMobileMenu = () => {
-          isMenuOpen = !isMenuOpen;
-          mobileMenu.classList.toggle('hidden');
-          mobileMenu.classList.toggle('opacity-0');
-          mobileMenu.classList.toggle('pointer-events-none');
-          mobileMenu.setAttribute('aria-hidden', String(!isMenuOpen));
-          document.body.style.overflow = isMenuOpen ? 'hidden' : '';
-          mobileMenuButton.setAttribute('aria-expanded', String(isMenuOpen));
-          mobileMenuButton.innerHTML = isMenuOpen ? CloseIcon() : MenuIcon();
-          if (isMenuOpen) {
-            header.classList.add('bg-primary/90', 'shadow-lg', 'backdrop-blur-sm');
-            header.classList.remove('bg-transparent');
-          } else {
-            handleScroll();
-          }
-        };
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-        document.querySelectorAll('.mobile-nav-link').forEach(link => link.addEventListener('click', () => isMenuOpen && toggleMobileMenu()));
-
-        // --- Gallery Logic ---
-        let currentImageIndex = null;
-        let focusedElementBeforeLightbox = null;
-
-        const createLightbox = (index) => {
-            const image = galleryImages[index];
-            const lightboxHTML = `
-                <div id="lightbox" class="lightbox fixed inset-0 bg-black/90 z-[100] flex items-center justify-center" role="dialog" aria-modal="true" aria-label="${image.alt}">
-                    <div class="relative flex items-center justify-center w-full h-full">
-                        <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 text-white rounded-full p-3 hover:bg-white/40 transition-colors focus:outline-none focus:ring-2 focus:ring-white" aria-label="Previous image">${ChevronLeftIcon()}</button>
-                        <figure class="flex flex-col items-center justify-center max-w-[90vw] max-h-[90vh]">
-                            <img id="lightbox-img" src="${image.src}" alt="${image.alt}" class="max-h-[80vh] w-auto h-auto object-contain rounded-lg shadow-2xl" />
-                            <figcaption id="lightbox-caption" class="text-white/80 text-center mt-4 text-lg px-4">${image.alt}</figcaption>
-                        </figure>
-                        <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 text-white rounded-full p-3 hover:bg-white/40 transition-colors focus:outline-none focus:ring-2 focus:ring-white" aria-label="Next image">${ChevronRightIcon()}</button>
-                        <button id="lightbox-close" class="absolute top-4 right-4 bg-white/20 text-white rounded-full p-3 hover:bg-white/40 transition-colors focus:outline-none focus:ring-2 focus:ring-white" aria-label="Close image viewer">${CloseIcon()}</button>
-                    </div>
-                </div>
-            `;
-            document.body.insertAdjacentHTML('beforeend', lightboxHTML);
-            document.body.style.overflow = 'hidden';
-
-            document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-            document.getElementById('lightbox').addEventListener('click', (e) => e.target.id === 'lightbox' && closeLightbox());
-            document.getElementById('lightbox-prev').addEventListener('click', showPrevImage);
-            document.getElementById('lightbox-next').addEventListener('click', showNextImage);
-            document.getElementById('lightbox-close').focus();
-        };
-
-        const closeLightbox = () => {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox) lightbox.remove();
-            document.body.style.overflow = '';
-            document.removeEventListener('keydown', handleKeydown);
-            focusedElementBeforeLightbox?.focus();
-            currentImageIndex = null;
-        };
-
-        const updateLightboxImage = (index) => {
-            const image = galleryImages[index];
-            const imgEl = document.getElementById('lightbox-img');
-            const captionEl = document.getElementById('lightbox-caption');
-            if(imgEl) {
-                imgEl.src = image.src;
-                imgEl.alt = image.alt;
-            }
-            if(captionEl) captionEl.textContent = image.alt;
-        };
-
-        const showNextImage = () => {
-            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-            updateLightboxImage(currentImageIndex);
-        };
-
-        const showPrevImage = () => {
-            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-            updateLightboxImage(currentImageIndex);
-        };
-
-        const handleKeydown = (e) => {
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') showNextImage();
-            if (e.key === 'ArrowLeft') showPrevImage();
-        };
-
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                focusedElementBeforeLightbox = e.currentTarget;
-                const index = parseInt(e.currentTarget.getAttribute('data-gallery-index'));
-                currentImageIndex = index;
-                createLightbox(index);
-                document.addEventListener('keydown', handleKeydown);
-            });
-        });
-
-        // --- Contact Form Logic ---
-        const form = document.getElementById('contact-form');
-        const submitButton = document.getElementById('submit-button');
-        const formStatus = document.getElementById('form-status');
-
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          submitButton.disabled = true;
-          submitButton.textContent = 'Sending...';
-          formStatus.innerHTML = '';
-
-          setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = 'Send Message';
-            formStatus.innerHTML = `<p class="w-full text-green-800 bg-green-100 p-3 rounded-lg text-center">Thank you for your message! We will get back to you shortly.</p>`;
-            form.reset();
-            setTimeout(() => formStatus.innerHTML = '', 5000);
-          }, 1000);
-        });
-      }
-
-      // === Main App Render Function ===
-      function renderApp() {
-        document.body.innerHTML = `
-          ${Header()}
-          <main>
-            ${Hero()}
-            ${About()}
-            ${Services()}
-            ${Gallery()}
-            ${Testimonials()}
-            ${Contact()}
-          </main>
-          ${Footer()}
-        `;
-        document.body.classList.add('loaded');
-        addEventListeners();
-      }
-
-      document.addEventListener('DOMContentLoaded', renderApp);
-    </script>
+  <body class="bg-light-gray text-gray-800">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

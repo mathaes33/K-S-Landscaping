@@ -1,0 +1,37 @@
+# Netlify configuration file for K&S Landscaping Website
+
+# This section tells Netlify how to build the site.
+# Since this is a "buildless" project, we don't need a build command.
+# The `publish` directory is the root, where your index.html lives.
+[build]
+  command = "echo 'No build step required'"
+  publish = "/"
+
+# This redirect rule is crucial for a Single Page Application (SPA).
+# It ensures that any direct navigation to a route (e.g., /services/custom-patios)
+# is handled by your index.html, allowing React Router to manage the routing.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# This section sets custom HTTP headers for all pages to improve security.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content-Security-Policy (CSP) helps prevent cross-site scripting (XSS) attacks.
+    # This policy allows resources from your site ('self') and the specific CDNs
+    # you are using for React, Tailwind CSS, Google Fonts, and images.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://aistudiocdn.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
+    
+    # Prevents your site from being embedded in iframes on other sites (clickjacking protection).
+    X-Frame-Options = "DENY"
+    
+    # Prevents the browser from MIME-sniffing a response away from the declared content-type.
+    X-Content-Type-Options = "nosniff"
+    
+    # Controls how much referrer information is sent with requests.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Disables browser features like camera and microphone that your site doesn't use.
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
